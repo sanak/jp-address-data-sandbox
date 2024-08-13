@@ -2,10 +2,8 @@
 name: Deploy static content to Pages
 
 on:
-  # mainブランチを対象としたプッシュ・プルリクエスト時に実行されます
+  # mainブランチを対象としたプッシュ時に実行されます
   push:
-    branches: ['main']
-  pull_request:
     branches: ['main']
 
   # Actionsタブから手動でワークフローを実行できるようにします

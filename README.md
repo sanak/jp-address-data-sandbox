@@ -11,7 +11,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 ## Webアプリ
 
-(予定) https://sanak.github.io/jp-address-data-sandbox/
+(暫定) https://sanak.github.io/jp-address-data-sandbox/
 
 ## リリースデータ
 
