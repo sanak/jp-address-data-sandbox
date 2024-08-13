@@ -1,0 +1,7 @@
+.maplibregl-ctrl-geocoder {
+  width: 400px;
+}
+
+div.maplibregl-ctrl-top-right div.maplibregl-ctrl:first-child {
+  margin-bottom: 38px;
+}

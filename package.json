@@ -1,0 +1,36 @@
+{
+  "name": "jp-address-data-sandbox",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Japan Address Data Sandbox",
+  "type": "module",
+  "scripts": {
+    "download": "bash bin/download.sh",
+    "build:data": "bash bin/build.sh",
+    "dev": "vite web --host",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "build:web": "vite build web",
+    "preview": "vite preview web"
+  },
+  "engine": {
+    "node": ">=20.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "mapshaper": "^0.6.98",
+    "prettier": "3.3.3",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@maplibre/maplibre-gl-geocoder": "^1.5.0",
+    "@maplibre/maplibre-gl-inspect": "^1.7.0",
+    "@watergis/maplibre-gl-legend": "^2.0.5",
+    "events": "^3.3.0",
+    "maplibre-gl": "^4.5.2",
+    "pmtiles": "^3.0.7"
+  }
+}

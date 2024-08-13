@@ -1,0 +1,12 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="resident-point">
+        <SrcDataSource>resident-point.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>WGS84</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="経度" y="緯度"/>
+        <Field name="city_code" src="市区町村コード" type="String"/>
+        <Field name="town_name" src="町又は字の名称" type="String"/>
+        <Field name="block_num" src="街区符号" type="String"/>
+        <Field name="resident_num" src="基礎番号" type="String"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>

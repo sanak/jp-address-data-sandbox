@@ -1,0 +1,15 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="block-point">
+        <SrcDataSource>block-point.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>WGS84</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="経度" y="緯度"/>
+        <Field name="pref_name" src="都道府県名" type="String"/>
+        <Field name="city_name" src="市区町村名" type="String"/>
+        <Field name="town_name" src="大字・丁目名" type="String"/>
+        <Field name="koaza_aka_name" src="小字・通称名" type="String"/>
+        <Field name="block_parcel_num" src="街区符号・地番" type="String"/>
+        <Field name="resident_address_flag" src="住居表示フラグ" type="Integer"/>
+        <Field name="rep_flag" src="代表フラグ" type="Integer"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>

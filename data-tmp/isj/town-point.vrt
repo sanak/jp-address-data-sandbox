@@ -1,0 +1,16 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="town-point">
+        <SrcDataSource>town-point.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>WGS84</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="経度" y="緯度"/>
+        <Field name="pref_code" src="都道府県コード" type="String"/>
+        <Field name="pref_name" src="都道府県名" type="String"/>
+        <Field name="city_code" src="市区町村コード" type="String"/>
+        <Field name="city_name" src="市区町村名" type="String"/>
+        <Field name="town_code" src="大字町丁目コード" type="String"/>
+        <Field name="town_name" src="大字町丁目名" type="String"/>
+        <Field name="src_code" src="原典資料コード" type="Integer"/>
+        <Field name="town_type" src="大字・字・丁目区分コード" type="Integer"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
