@@ -15,10 +15,12 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 ## リリースデータ
 
+**注意: GitHub Release上の最新アセットダウンロードURLを直接指定してのPMTilesアクセスはできませんので、お手元にダウンロード後、ローカル開発環境より確認してください。**
+
 ### admin-boundary
 
-* 出典(ファイル名 | 最新アセットURL):
-  * PMTiles: `admin-boundary.pmtiles` | `TODO`
+* 出典(ファイル名 | 最新アセットダウンロードURL):
+  * PMTiles: `admin-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/admin-boundary.pmtiles
 * 原初データ出典: [「国土数値情報（行政区域データ 2024年（令和6年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html)
   * 利用規約: [国土数値情報ダウンロードサイトコンテンツ利用規約（政府標準利用規約準拠版）](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-01)
   * データ仕様: [「国土数値情報（行政区域データ 2024年（令和6年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html)
@@ -36,8 +38,8 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 ### census-boundary
 
-* 出典(ファイル名 | 最新アセットURL):
-  * PMTiles: `census-boundary.pmtiles` | `TODO`
+* 出典(ファイル名 | 最新アセットダウンロードURL):
+  * PMTiles: `census-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/census-boundary.pmtiles
 * 原初データ出典: [「令和２年国勢調査 町丁・字等別境界データ 2020年（JGD2011）」（総務省統計局）](https://www.e-stat.go.jp/gis/statmap-search?page=1&type=2&aggregateUnitForBoundary=A&toukeiCode=00200521&toukeiYear=2020&serveyId=A002005212020&datum=2011)
   * 利用規約: [利用規約 | 政府統計の総合窓口](https://www.e-stat.go.jp/terms-of-use)
   * データ仕様(PDF): [令和２年国勢調査 町丁・字等境界データ データベース定義書](https://www.e-stat.go.jp/help/data-definition-information/downloaddata/A002005212020.pdf)
@@ -57,8 +59,8 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 ### town-point
 
-* 出典(ファイル名 | 最新アセットURL):
-  * PMTiles: `town-point.pmtiles` | `TODO`
+* 出典(ファイル名 | 最新アセットダウンロードURL):
+  * PMTiles: `town-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/town-point.pmtiles
 * 原初データ出典: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
   * データ仕様: [大字・町丁目レベル位置参照情報 (2023年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/17.0b.html)
@@ -79,8 +81,8 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 ### block-point
 
-* 出典(ファイル名 | 最新アセットURL):
-  * PMTiles: `block-point.pmtiles` | `TODO`
+* 出典(ファイル名 | 最新アセットダウンロードURL):
+  * PMTiles: `block-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/block-point.pmtiles
 * 原初データ出典: [「位置参照情報ダウンロードサービス（街区レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
   * データ仕様: [街区レベル位置参照情報 (2023年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/22.0a.html)
@@ -113,21 +115,20 @@ npm install
 
 確認はできていませんが、macOS以外の環境でも動作すると思います。
 
-```bash
-# リリースデータの最新アセットURLを環境変数に設定
-cp .env.example .env
-npm run dev
-```
-
-http://localhost:5173/jp-address-data-sandbox/ にアクセスすると、Webアプリが表示されます。
+1. 各PMTilesファイルを最新リリースからダウンロードして `data` フォルダ内に配置
+2. 以下で開発モードでWebアプリを起動
+   ```bash
+   npm run dev
+   ```
+3. ブラウザから http://localhost:5173/jp-address-data-sandbox/ にアクセスすると、Webアプリが表示されます。
 
 ### データのダウンロード・変換
 
 現時点では、macOS + Homebrew環境でのみ、動作を確認しています。
 
-推奨要件:
-* GDAL: 3.9.0 以上
-* Tippecanoe: 2.58.0 以上
+必須要件:
+* GDAL (3.9.0 以上推奨)
+* Tippecanoe (2.58.0 以上推奨)
 * wget
 * unzip
 
@@ -138,7 +139,6 @@ npm run build:data
 
 * リリースデータには含めていませんが、 [電子国土基本図（地名情報）「住居表示住所」（国土交通省）](https://www.gsi.go.jp/kihonjohochousa/jukyo_jusho.html) のデータも含みます。
 * `data/flatgeobuf` フォルダ内のFlatGeobuf形式のファイル、 `data/pmtiles` フォルダ内にPMTiles形式のファイルが生成されますので、FlatGeobufファイルについてはQGIS、PMTilesファイルについては [PMTiles Viewer](https://pmtiles.io/) などで詳細を確認できます。
-* ローカルのWebアプリで表示する際は、 `.env` ファイルを削除すれば、ローカルのPMTilesファイルを読み込むようになります。
 
 ## ライセンス
 
