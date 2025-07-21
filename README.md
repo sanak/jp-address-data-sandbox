@@ -21,10 +21,10 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
   * PMTiles: `admin-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/admin-boundary.pmtiles
-* 原初データ出典: [「国土数値情報（行政区域データ 2024年（令和6年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html)
+* 原初データ出典: [「国土数値情報（行政区域データ 2025年（令和7年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html)
   * 利用規約: [国土数値情報ダウンロードサイトコンテンツ利用規約（政府標準利用規約準拠版）](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-01)
-  * データ仕様: [「国土数値情報（行政区域データ 2024年（令和6年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html)
-* 概要: [「国土数値情報（行政区域データ 2024年（令和6年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html) を加工して作成
+  * データ仕様: [「国土数値情報（行政区域データ 2025年（令和7年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html)
+* 概要: [「国土数値情報（行政区域データ 2025年（令和7年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html) を加工して作成
 * レイヤ名: `admin-boundary`
 * ジオメトリ種別: MultiPolygon
   * [mapshaper](https://github.com/mbloch/mapshaper) によるディゾルブ処理を行っています。
@@ -61,10 +61,10 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
   * PMTiles: `town-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/town-point.pmtiles
-* 原初データ出典: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
+* 原初データ出典: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
-  * データ仕様: [大字・町丁目レベル位置参照情報 (2023年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/17.0b.html)
-* 概要: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html) を加工して作成
+  * データ仕様: [大字・町丁目レベル位置参照情報 (2024年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/18.0b.html)
+* 概要: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html) を加工して作成
 * レイヤ名: `town-point`
 * ジオメトリ種別: Point
 * 属性: [town-point.vrt](data-tmp/isj/town-point.vrt)
@@ -83,10 +83,10 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
   * PMTiles: `block-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/block-point.pmtiles
-* 原初データ出典: [「位置参照情報ダウンロードサービス（街区レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
+* 原初データ出典: [「位置参照情報ダウンロードサービス（街区レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
-  * データ仕様: [街区レベル位置参照情報 (2023年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/22.0a.html)
-* 概要: [「位置参照情報ダウンロードサービス（街区レベル）令和5年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html) を加工して作成
+  * データ仕様: [街区レベル位置参照情報 (2024年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/23.0a.html)
+* 概要: [「位置参照情報ダウンロードサービス（街区レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html) を加工して作成
 * レイヤ名: `block-point`
 * ジオメトリ種別: Point
 * 属性: [block-point.vrt](data-tmp/isj/block-point.vrt)
@@ -105,7 +105,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 ### 共通
 
 必須要件:
-* Node.js: 20.10.0 以上
+* Node.js: 22.13.0 以上
 
 ```bash
 npm install

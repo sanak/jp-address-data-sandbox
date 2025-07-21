@@ -7,16 +7,16 @@ DATA_TMP_DIR=$SCRIPT_DIR/../data-tmp
 cd $DATA_TMP_DIR
 
 ################################################################################
-# ksj (国土数値情報) - 行政区域 2024 for administrative city boundary polygon
-# Link: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html
+# ksj (国土数値情報) - 行政区域 2025 for administrative city boundary polygon
+# Link: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html
 # Reference: https://github.com/open-geocoding/open-reverse-geocoder-ja/blob/main/bin/download.sh
 mkdir -p ksj
 cd ksj
-KSJ_ZIP_FNAME=N03-20240101_GML.zip
+KSJ_ZIP_FNAME=N03-20250101_GML.zip
 KSJ_OUT_FNAME=admin-boundary.shp
 if [ ! -e $KSJ_OUT_FNAME ]; then
   if [ ! -e $KSJ_ZIP_FNAME ]; then
-    wget "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2024/${KSJ_ZIP_FNAME}"
+    wget "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2025/${KSJ_ZIP_FNAME}"
   fi
   mkdir -p tmp
   unzip -o $KSJ_ZIP_FNAME -d tmp
@@ -24,7 +24,7 @@ if [ ! -e $KSJ_OUT_FNAME ]; then
     -lco ENCODING=UTF-8 \
     -oo ENCODING=UTF-8 \
     $KSJ_OUT_FNAME \
-    "tmp/N03-20240101.shp"
+    "tmp/N03-20250101.shp"
   rm -rf tmp
 fi
 
@@ -32,17 +32,17 @@ cd $DATA_TMP_DIR
 
 ################################################################################
 # isj (位置参照情報)
-# - 大字・町丁目レベル 2023 for town representative point
-# - 街区レベル 2023 for block representative point
+# - 大字・町丁目レベル 2024 for town representative point
+# - 街区レベル 2024 for block representative point
 # Links:
 # - https://nlftp.mlit.go.jp/isj/index.html
-# - https://nlftp.mlit.go.jp/isj/dls/form/17.0b.html
-# - https://nlftp.mlit.go.jp/isj/dls/form/22.0a.html
+# - https://nlftp.mlit.go.jp/isj/dls/form/18.0b.html
+# - https://nlftp.mlit.go.jp/isj/dls/form/23.0a.html
 # Reference: https://github.com/ypresto/imi-enrichment-address/blob/master/tools/download.sh
 mkdir -p isj
 cd isj
 
-ISJ_TOWN_VERSION=17.0b # 2023 大字・町丁目レベル
+ISJ_TOWN_VERSION=18.0b # 2024 大字・町丁目レベル
 ISJ_TOWN_OUT_FNAME=town-point.csv
 if [ ! -e $ISJ_TOWN_OUT_FNAME ]; then
   rm -f $ISJ_TOWN_OUT_FNAME
@@ -56,10 +56,14 @@ if [ ! -e $ISJ_TOWN_OUT_FNAME ]; then
     fi
     # unzip only town level csv
     unzip -p "town/${zip}" '*.[cC][sS][vV]' | iconv -f CP932 -t utf8 | tail -n +2 >> $ISJ_TOWN_OUT_FNAME
+    # append new line if not exists
+    if [ -n "$(tail -c1 $ISJ_TOWN_OUT_FNAME)" ]; then
+      echo >> $ISJ_TOWN_OUT_FNAME
+    fi
   done
 fi
 
-ISJ_BLOCK_VERSION=22.0a # 2023 街区レベル
+ISJ_BLOCK_VERSION=23.0a # 2024 街区レベル
 ISJ_BLOCK_OUT_FNAME=block-point.csv
 if [ ! -e $ISJ_BLOCK_OUT_FNAME ]; then
   rm -f $ISJ_BLOCK_OUT_FNAME
@@ -73,6 +77,10 @@ if [ ! -e $ISJ_BLOCK_OUT_FNAME ]; then
     fi
     # unzip only block level csv
     unzip -p "block/${zip}" '*.[cC][sS][vV]' | iconv -f CP932 -t utf8 | tail -n +2 >> $ISJ_BLOCK_OUT_FNAME
+    # append new line if not exists
+    if [ -n "$(tail -c1 $ISJ_BLOCK_OUT_FNAME)" ]; then
+      echo >> $ISJ_BLOCK_OUT_FNAME
+    fi
   done
 fi
 
@@ -138,6 +146,10 @@ if [ ! -e $JUSHO_OUT_FNAME ]; then
       wget "https://saigai.gsi.go.jp/jusho/download/data/${zip}" -O "zip/${zip}"
     fi
     unzip -p "zip/${zip}" '*.[cC][sS][vV]' | tail -n +2 >> $JUSHO_OUT_FNAME
+    # append new line if not exists
+    if [ -n "$(tail -c1 $JUSHO_OUT_FNAME)" ]; then
+      echo >> $JUSHO_OUT_FNAME
+    fi
   done
 fi
 
