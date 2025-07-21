@@ -20,7 +20,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 ### admin-boundary
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
-  * PMTiles: `admin-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/admin-boundary.pmtiles
+  * PMTiles: `admin-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.2.0/admin-boundary.pmtiles
 * 原初データ出典: [「国土数値情報（行政区域データ 2025年（令和7年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html)
   * 利用規約: [国土数値情報ダウンロードサイトコンテンツ利用規約（政府標準利用規約準拠版）](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-01)
   * データ仕様: [「国土数値情報（行政区域データ 2025年（令和7年）版）」（国土交通省）](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html)
@@ -39,7 +39,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 ### census-boundary
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
-  * PMTiles: `census-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/census-boundary.pmtiles
+  * PMTiles: `census-boundary.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.2.0/census-boundary.pmtiles
 * 原初データ出典: [「令和２年国勢調査 町丁・字等別境界データ 2020年（JGD2011）」（総務省統計局）](https://www.e-stat.go.jp/gis/statmap-search?page=1&type=2&aggregateUnitForBoundary=A&toukeiCode=00200521&toukeiYear=2020&serveyId=A002005212020&datum=2011)
   * 利用規約: [利用規約 | 政府統計の総合窓口](https://www.e-stat.go.jp/terms-of-use)
   * データ仕様(PDF): [令和２年国勢調査 町丁・字等境界データ データベース定義書](https://www.e-stat.go.jp/help/data-definition-information/downloaddata/A002005212020.pdf)
@@ -60,7 +60,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 ### town-point
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
-  * PMTiles: `town-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/town-point.pmtiles
+  * PMTiles: `town-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.2.0/town-point.pmtiles
 * 原初データ出典: [「位置参照情報ダウンロードサービス（大字・町丁目レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
   * データ仕様: [大字・町丁目レベル位置参照情報 (2024年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/18.0b.html)
@@ -82,7 +82,7 @@ Webブラウザ上での地図表示や逆ジオコーディングなど、様�
 ### block-point
 
 * 出典(ファイル名 | 最新アセットダウンロードURL):
-  * PMTiles: `block-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.1.0/block-point.pmtiles
+  * PMTiles: `block-point.pmtiles` | https://github.com/sanak/jp-address-data-sandbox/releases/download/v0.2.0/block-point.pmtiles
 * 原初データ出典: [「位置参照情報ダウンロードサービス（街区レベル）令和6年」（国土交通省）](https://nlftp.mlit.go.jp/isj/index.html)
   * 利用規約: [位置参照情報ダウンロードサービスコンテンツ利用規約](https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03)
   * データ仕様: [街区レベル位置参照情報 (2024年版) データ形式](https://nlftp.mlit.go.jp/isj/dls/form/23.0a.html)
