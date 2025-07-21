@@ -7,8 +7,8 @@ DATA_TMP_DIR=$SCRIPT_DIR/../data-tmp
 DATA_DIR=$SCRIPT_DIR/../data
 
 ################################################################################
-# ksj (国土数値情報) - 行政区域 2024 for administrative city boundary polygon
-# Link: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2024.html
+# ksj (国土数値情報) - 行政区域 2025 for administrative city boundary polygon
+# Link: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2025.html
 # Reference:
 # - https://github.com/open-geocoding/open-reverse-geocoder-ja/blob/main/bin/download.sh
 # - https://github.com/geolonia/poc-reverse-geocoder/blob/main/bin/build.sh
@@ -40,12 +40,12 @@ fi
 
 ################################################################################
 # isj (位置参照情報)
-# - 大字・町丁目レベル 2023 for town representative point
-# - 街区レベル 2023 for block representative point
+# - 大字・町丁目レベル 2024 for town representative point
+# - 街区レベル 2024 for block representative point
 # Links:
 # - https://nlftp.mlit.go.jp/isj/index.html
-# - https://nlftp.mlit.go.jp/isj/dls/form/17.0b.html
-# - https://nlftp.mlit.go.jp/isj/dls/form/22.0a.html
+# - https://nlftp.mlit.go.jp/isj/dls/form/18.0b.html
+# - https://nlftp.mlit.go.jp/isj/dls/form/23.0a.html
 cd $DATA_TMP_DIR/isj
 ISJ_TOWN_GJL_PATH=$DATA_TMP_DIR/isj/town-point.geojsonl
 ISJ_TOWN_FGB_PATH=flatgeobuf/town-point.fgb
